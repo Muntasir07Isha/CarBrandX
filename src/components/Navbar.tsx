@@ -14,11 +14,15 @@ export default function Navbar() {
         />
         <span className="text-2xl font-extrabold text-black">CarBrandX</span>
       </div>
+
       <nav className="flex gap-6 text-gray-700 text-sm font-medium">
+      <Link href="/" className="hover:text-black transition">
+        Home
+      </Link>
       <Link href="/brands" className="hover:text-black transition">
          Brands
       </Link>
-
+        
         <a href="#">Explore</a>
         <a href="#">Support</a>
         <a href="#">👤</a>

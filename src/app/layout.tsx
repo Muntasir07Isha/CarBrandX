@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Outfit } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -30,8 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<body className={`${outfit.className} font-sans antialiased`}>
+<body className={`${outfit.className} font-sans antialiased bg-gray-900 text-white`}>
+     <Navbar/>
         {children}
+      <Footer/>
       </body>
     </html>
   );

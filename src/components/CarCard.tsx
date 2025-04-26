@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface CarCardProps {
   image: string;
@@ -8,6 +9,10 @@ interface CarCardProps {
 }
 
 export default function CarCard({ image, label, title, subtitle }: CarCardProps) {
+  const router = useRouter(); // ✅ Now it's inside the component
+
+  const slug = `${label?.toLowerCase()}-${title.toLowerCase()}-${subtitle}`;
+
   return (
     <div className="bg-gray-100 border rounded-lg overflow-hidden shadow-sm w-full max-w-sm">
       <div className="w-full h-48 relative bg-white">
@@ -23,8 +28,11 @@ export default function CarCard({ image, label, title, subtitle }: CarCardProps)
         {subtitle && (
           <p className="text-sm text-gray-600 mb-2">{subtitle}</p>
         )}
-        <button className="text-sm font-semibold text-black hover:text-red-600 transition">
-          Explore <span className="ml-1">→</span>
+        <button
+          onClick={() => router.push(`/cars/${slug}`)}
+          className="text-sm font-semibold text-black hover:text-red-600 transition"
+        >
+          Explore →
         </button>
       </div>
     </div>
