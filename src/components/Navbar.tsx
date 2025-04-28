@@ -20,10 +20,11 @@ export default function Navbar() {
         Home
       </Link>
       <Link href="/brands" className="hover:text-black transition">
-         Brands
+         Models
       </Link>
-        
-        <a href="#">Explore</a>
+      <Link href="/benefits" className="text-sm font-medium">Benefits</Link>
+
+        <a href="#">Stories</a>
         <a href="#">Support</a>
         <a href="#">👤</a>
       </nav>
