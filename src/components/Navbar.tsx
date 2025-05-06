@@ -23,8 +23,8 @@ export default function Navbar() {
          Models
       </Link>
       <Link href="/benefits" className="text-sm font-medium">Benefits</Link>
-
-        <a href="#">Stories</a>
+      <Link href="/finance" className="text-sm font-medium">Discover</Link>
+        
         <a href="#">Support</a>
         <a href="#">👤</a>
       </nav>
